@@ -1,11 +1,35 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.13'
+gem 'bootstrap-sass'
+gem 'bcrypt-ruby'
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+gem 'pg'
+gem 'magic_encoding'
+gem 'simple_form'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+group :development, :test do
+  gem 'rspec-rails'
+  gem 'guard-rspec'
+  gem 'guard-spork'
+  gem 'spork'
+end
 
-gem 'sqlite3'
+group :development do
+  # Deploy with Capistrano
+  gem 'capistrano'
+  gem 'rvm-capistrano'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'rb-inotify'
+  gem 'libnotify'
+  gem 'factory_girl_rails'
+  gem 'database_cleaner'
+end
 
 
 # Gems used only for assets and not required
@@ -29,7 +53,7 @@ gem 'jquery-rails'
 # gem 'jbuilder'
 
 # Use unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn', :platform => :ruby
 
 # Deploy with Capistrano
 # gem 'capistrano'
