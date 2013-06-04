@@ -9,5 +9,6 @@ class CreateBlogs < ActiveRecord::Migration
 
       t.timestamps
     end
+    add_index :blogs, :tag
   end
 end

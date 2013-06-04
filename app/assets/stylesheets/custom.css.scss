@@ -219,3 +219,22 @@ input, textarea, select, .uneditable-input {
     }
   }
 }
+/* blogs */
+/* blogs index */
+.blogs {
+  list-style: none;
+  margin: 0;
+  li {
+    border: 1px solid #999;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #999;
+    margin: 5px 0 5px 0;
+  }
+}
+/* blog show */
+.blog {
+  border: 1px solid #999;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #999;
+  padding: 10px;
+}

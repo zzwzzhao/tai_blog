@@ -1,0 +1,7 @@
+<li>
+  <%= link_to blog.title, blog %>
+  <% if current_user.admin? %>
+    | <%= link_to "编辑", edit_blog_path(blog) %>
+    | <%= link_to "删除", blog, method: :delete, data: { confirm: "你确定？" } %>
+  <% end %>
+</li>
