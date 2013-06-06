@@ -9,6 +9,7 @@ gem 'bootstrap-will_paginate'
 gem 'pg'
 gem 'magic_encoding'
 gem 'simple_form'
+gem 'rails_kindeditor', '~> 0.3.19'
 
 group :development, :test do
   gem 'rspec-rails'

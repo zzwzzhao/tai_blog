@@ -1,0 +1,54 @@
+zh-CN:
+  will_paginate:
+    next_label: 下一页
+    page_entries_info:
+      multi_page: 正显示%{model}的第%{from}至第%{to}条记录(共%{count}条记录)
+      multi_page_html: 正显示%{model}的第<b>%{from}</b>至第<b>%{to}</b>条记录(共<b>%{count}</b>条记录)
+      single_page:
+        one: 正显示1条%{model}记录
+        other: 正显示所有共%{count}条%{model}记录
+        zero: 暂无%{model}记录
+      single_page_html:
+        one: 正显示<b>1</b>条%{model}记录
+        other: 正显示所有共<b>%{count}</b>条%{model}记录
+        zero: 暂无%{model}记录
+    page_gap: …
+    previous_label: 上一页
+  errors:
+    messages:
+      confirmation: "与确认值不匹配"
+      inclusion: "不包含于列表中"
+      exclusion: "是保留关键字"
+      invalid: "是无效的"
+      confirmation: "与确认值不匹配"
+      accepted: "必须是可被接受的"
+      empty: "不能留空"
+      blank: "不能为空字符"
+      too_long: "过长（最长为 %{count} 个字符）"
+      too_short: "过短（最短为 %{count} 个字符）"
+      wrong_length: "长度非法（必须为 %{count} 个字符）"
+      taken: "已经被使用"
+      not_a_number: "不是数字"
+      not_an_integer: "必须是整数"
+      greater_than: "必须大于 %{count}"
+      greater_than_or_equal_to: "必须大于或等于 %{count}"
+      equal_to: "必须等于 %{count}"
+      less_than: "必须小于 %{count}"
+      less_than_or_equal_to: "必须小于或等于 %{count}"
+      odd: "必须为单数"
+      even: "必须为双数"
+      record_invalid: "校验失败: %{errors}"
+  globals:
+    operation: "运营数据"
+    pay: "付费数据"
+    player: "玩家管理"
+    game: "游戏管理"
+    log: "日志查询"
+    system: "系统管理"
+    user: "用户管理"
+    sky_backend: "%{platform_name}-仙纪后台管理系统"
+    holmes_backend: "%{platform_name}-女皇后台管理系统"
+    lost_backend: "%{platform_name}-lost后台管理系统"
+    save: "保存"
+    confirm: "确定"
+    no_data: "暂无数据！"

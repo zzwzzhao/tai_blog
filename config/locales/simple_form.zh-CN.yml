@@ -1,0 +1,60 @@
+zh-CN:
+  simple_form:
+    "yes": '是'
+    "no": '否'
+    required:
+      text: '必填项'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "您提交的表单有误，请修改"
+      confirmation: '密码不匹配'
+    # Labels and hints examples
+    # labels:
+    #   defaults:
+    #     password: 'Password'
+    #   user:
+    #     new:
+    #       email: 'E-mail to sign in.'
+    #     edit:
+    #       email: 'E-mail.'
+    # hints:
+    #   defaults:
+    #     username: 'User name to sign in.'
+    #     password: 'No special characters, please.'
+    labels:
+      user:
+        login: '用户名：'
+        password: '密码：'
+        password_confirmation: '密码确认：'
+      data_source:
+        server_id: '服务器ID：'
+        server_name: '服务器名称：'
+        host: '域名或IP：'
+        port: '端口：'
+        username: '用户名：'
+        password: '密码：'
+        database: '数据库：'
+        table_name: '表名：'
+      coupon:
+        gift: '礼包名：'
+        coupon_num: '新增数量：'
+      server_op:
+        snode: '服务器ID：'
+        op: 'GM后台指令：'
+        arg: '指令参数：'
+        expect_time: '预期时间：'
+      server_deploy:
+        version: '版本号：'
+        kind: '类型：'
+        content:  '上传：'
+      platform:
+        platform_id: '平台ID：'
+        platform_name: '平台名称：'
+        host: '域名或IP：'
+        port: '端口：'
+        username: '用户名：'
+        password: '密码：'
+        database: '数据库：'

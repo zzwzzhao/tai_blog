@@ -1,5 +1,3 @@
-<%= javascript_include_tag "kindeditor/kindeditor" %>
-<%= javascript_include_tag "kindeditor/zh_CN" %>
 <% provide(:title, '写博客') %>
 <h1>写博客</h1>
 
@@ -15,14 +13,9 @@
       <%= f.text_field :tag %>
 
       <%= f.label :content %>
-      <%= f.text_area :content %>
+      <%= f.kindeditor :content, width: 800, height: 300 %>
 
       <%= f.submit "提交", class: "btn btn-large btn-primary" %>
     <% end %>
   </div>
 </div>
-<script>
-$(function() {
-  var editor = KindEditor.create('textarea[id="blog_content"]');
-});
-</script>
