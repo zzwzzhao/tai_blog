@@ -1,14 +1,14 @@
 # -*- encoding : utf-8 -*-
-class RepliesController < ApplicationController
+class CommentsController < ApplicationController
   before_filter :signed_in_user
   before_filter :correct_user, only: [:edit, :update, :destroy]
 
   def create
     @blog = Blog.find(params[:blog_id])
-    @reply = @blog.replies.build(params[:reply])
-    @reply.user = current_user
-    if @reply.save
-      flash[:success] = "回复已成功"
+    @comment = @blog.comments.build(params[:comment])
+    @comment.user = current_user
+    if @comment.save
+      flash[:success] = "评论已成功"
       redirect_to @blog
     else
       render @blog
@@ -16,15 +16,15 @@ class RepliesController < ApplicationController
   end
 
   def edit
-    @blog = Blog.find(params[:topic_id])
-    @reply = Reply.find(params[:id])
+    @blog = Blog.find(params[:blog_id])
+    @comment = Comment.find(params[:id])
   end
 
   def destroy
     @blog = Blog.find(params[:blog_id])
-    @reply = @blog.replies.find(params[:id])
-    @reply.destroy
-    flash[:success] = "回复已删除"
+    @comment = @blog.comments.find(params[:id])
+    @comment.destroy
+    flash[:success] = "评论已删除"
     redirect_to @blog
   end
 end

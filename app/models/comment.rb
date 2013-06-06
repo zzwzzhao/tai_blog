@@ -1,5 +1,5 @@
 # -*- encoding : utf-8 -*-
-class Reply < ActiveRecord::Base
+class Comment < ActiveRecord::Base
   attr_accessible :content
 
   belongs_to :user

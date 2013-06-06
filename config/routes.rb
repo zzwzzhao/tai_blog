@@ -4,7 +4,7 @@ TaiBlog::Application.routes.draw do
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
   resources :blogs do
-    resources :replies
+    resources :comments
   end
 
   root to: 'static_pages#home'

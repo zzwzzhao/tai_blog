@@ -15,14 +15,14 @@
       <%= @blog.updated_at.strftime("%Y-%m-%d %H:%M:%S") %>&nbsp;
     </p>
   </footer>
-  <ul class="replies">
+  <ul class="comments">
     <li>
-      <h3><%= @blog.replies_count %>条评论</h3>
+      <h3><%= @blog.comments_count %>条评论</h3>
     </li>
-    <% if @blog.replies.exists %>
-      <%= render @blog.replies.select(&:persisted?) %>
+    <% if @blog.comments.exists %>
+      <%= render @blog.comments.select(&:persisted?) %>
     <% end %>
   </ul>
-  <%= render 'replies/form' %>
+  <%= render 'comments/form' %>
 </div>
 

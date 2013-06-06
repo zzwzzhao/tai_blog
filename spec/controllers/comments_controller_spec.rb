@@ -1,7 +1,7 @@
 # -*- encoding : utf-8 -*-
 require 'spec_helper'
 
-describe RepliesController do
+describe CommentsController do
 
   describe "GET 'index'" do
     it "returns http success" do
