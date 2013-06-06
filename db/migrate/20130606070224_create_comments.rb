@@ -1,14 +1,14 @@
 # -*- encoding : utf-8 -*-
-class CreateReplies < ActiveRecord::Migration
+class CreateComments < ActiveRecord::Migration
   def change
-    create_table :replies do |t|
+    create_table :comments do |t|
       t.integer :user_id
       t.integer :blog_id
       t.text :content
 
       t.timestamps
     end
-    add_index :replies, :user_id
-    add_index :replies, :blog_id
+    add_index :comments, :user_id
+    add_index :comments, :blog_id
   end
 end

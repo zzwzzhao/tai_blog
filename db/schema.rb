@@ -11,18 +11,42 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130603084004) do
+ActiveRecord::Schema.define(:version => 20130606071246) do
 
   create_table "blogs", :force => true do |t|
     t.string   "title"
     t.text     "content"
     t.integer  "user_id"
     t.string   "tag"
+    t.datetime "created_at",                    :null => false
+    t.datetime "updated_at",                    :null => false
+    t.integer  "replies_count",  :default => 0
+    t.integer  "comments_count", :default => 0
+  end
+
+  add_index "blogs", ["tag"], :name => "index_blogs_on_tag"
+
+  create_table "comments", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "blog_id"
+    t.text     "content"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  add_index "blogs", ["tag"], :name => "index_blogs_on_tag"
+  add_index "comments", ["blog_id"], :name => "index_comments_on_blog_id"
+  add_index "comments", ["user_id"], :name => "index_comments_on_user_id"
+
+  create_table "replies", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "blog_id"
+    t.text     "content"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "replies", ["blog_id"], :name => "index_replies_on_blog_id"
+  add_index "replies", ["user_id"], :name => "index_replies_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "name"

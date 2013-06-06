@@ -3,7 +3,9 @@ TaiBlog::Application.routes.draw do
 
   resources :users
   resources :sessions, only: [:new, :create, :destroy]
-  resources :blogs
+  resources :blogs do
+    resources :replies
+  end
 
   root to: 'static_pages#home'
   match '/signup',  to: 'users#new'

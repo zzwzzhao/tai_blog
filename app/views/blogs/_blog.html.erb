@@ -1,7 +1,24 @@
 <li>
-  <%= link_to blog.title, blog %>
-  <% if current_user.admin? %>
-    | <%= link_to "编辑", edit_blog_path(blog) %>
-    | <%= link_to "删除", blog, method: :delete, data: { confirm: "你确定？" } %>
-  <% end %>
+  <article>
+    <h2 class="text-left">
+      <%= link_to blog.title, blog %>
+      <% if current_user.admin? %>
+        | <%= link_to "编辑", edit_blog_path(blog) %>
+        | <%= link_to "删除", blog, method: :delete, data: { confirm: "你确定？" } %>
+      <% end %>
+    </h2>
+    <p class='word_wrap'>
+      <%= strip_tags(blog.content).gsub(/&nbsp;/,'').truncate(40) %>
+    </p>
+    <footer class="text-right">
+      <p>
+        <i class="icon-user"></i>
+        <%= blog.user.name %>&nbsp;
+        <i class="icon-time"></i>
+        <%= blog.created_at.strftime("%Y-%m-%d %H:%M:%S") %>&nbsp;
+        <i class="icon-edit"></i>
+        <%= blog.updated_at.strftime("%Y-%m-%d %H:%M:%S") %>&nbsp;
+      </p>
+    </footer>
+  </article>
 </li>

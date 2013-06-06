@@ -149,6 +149,7 @@ aside {
 .gravatar {
   float: left;
   margin-right: 10px;
+  border-radius: 50px;
 }
 
 .stats {
@@ -177,6 +178,7 @@ aside {
   margin-top: 10px;
   .gravatar {
     margin: 1px 1px;
+    border-radius: 50px;
   }
 }
 
@@ -229,12 +231,37 @@ input, textarea, select, .uneditable-input {
     border-radius: 5px;
     box-shadow: 1px 1px 5px #999;
     margin: 5px 0 5px 0;
+    padding: 10px;
+    a {
+      color: #000;
+    }
   }
 }
 /* blog show */
 .blog {
-  border: 1px solid #999;
+  border: 1px solid $grayLighter;
   border-radius: 5px;
   box-shadow: 2px 2px 5px #999;
   padding: 10px;
+}
+
+/* replys */
+.replies {
+  list-style: none;
+  margin: 0;
+  // border: 1px solid #999;
+  // border-radius: 5px;
+  // box-shadow: 2px 2px 5px #999;
+  margin: 5px 0 5px 0;
+  li {
+    margin: 10px;
+    padding: 10px;
+    border-bottom: 1px solid $grayLighter;
+    a {
+      color: #000;
+    }
+  }
+  .content{
+    margin-left: 60px;
+  }
 }

@@ -42,6 +42,8 @@ class BlogsController < ApplicationController
 
   def show
     @blog = Blog.find(params[:id])
+    @reply = @blog.replies.build
+    @replies = @blog.replies
   end
 
   private
