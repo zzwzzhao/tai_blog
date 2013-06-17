@@ -8,4 +8,5 @@ class Comment < ActiveRecord::Base
   validates :user_id, presence: true
   validates :blog_id, presence: true
   validates :content, presence: true
+  validates :content, exclusion: { in: ["<br />"], message: "评论不能为空"}
 end

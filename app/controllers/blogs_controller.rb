@@ -2,7 +2,11 @@
 class BlogsController < ApplicationController
   before_filter :admin_user, only: [:new, :create, :edit, :update, :destroy]
   def index
-    @blogs = Blog.paginate(page: params[:page])
+    if params[:tag]
+      @blogs = Blog.where(tag: params[:tag]).paginate(page: params[:page])
+    else
+      @blogs = Blog.paginate(page: params[:page])
+    end
   end
 
   def new

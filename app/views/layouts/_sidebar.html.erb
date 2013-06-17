@@ -1,0 +1,9 @@
+<ul class="tags">
+  <% if @tags.exists? %>
+    <% @tags.each do |tag| %>
+      <li>
+        <%= link_to "#{tag.tag}(#{tag.tag_number})", blogs_path(tag:tag.tag) %>
+      </li>
+    <% end %>
+  <% end %>
+</ul>

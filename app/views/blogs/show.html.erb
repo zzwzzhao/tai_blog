@@ -1,3 +1,4 @@
+<% provide(:title, @blog.title) %>
 <div class="blog">
   <div class="word_wrap">
     <h2 class="text-left">
@@ -23,6 +24,8 @@
       <%= render @blog.comments.select(&:persisted?) %>
     <% end %>
   </ul>
-  <%= render 'comments/form' %>
+  <% if signed_in? %>
+    <%= render 'comments/form' %>
+  <% end %>
 </div>
 

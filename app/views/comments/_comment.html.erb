@@ -7,7 +7,7 @@
     <%= comment.created_at.strftime("%Y-%m-%d %H:%M:%S") %>
     <br />
     <%= raw comment.content %>
-    <% if current_user.admin? or !current_user?(comment.user) %>
+    <% if signed_in? and current_user.admin? or current_user?(comment.user) %>
       | <%= link_to "编辑", edit_blog_comment_path(@blog, comment) %>
       | <%= link_to "删除", [@blog, comment], method: :delete, data: { confirm: "你确定？" } %>
     <% end %>

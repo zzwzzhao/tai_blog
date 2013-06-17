@@ -1,16 +1,15 @@
-zh-CN:
+en:
   simple_form:
-    "yes": '是'
-    "no": '否'
+    "yes": 'Yes'
+    "no": 'No'
     required:
-      text: '必填项'
+      text: 'required'
       mark: '*'
       # You can uncomment the line below if you need to overwrite the whole required html.
       # When using html, text and mark won't be used.
       # html: '<abbr title="required">*</abbr>'
     error_notification:
-      default_message: "您提交的表单有误，请修改"
-      confirmation: '密码不匹配'
+      default_message: "Please review the problems below:"
     # Labels and hints examples
     # labels:
     #   defaults:
@@ -24,15 +23,4 @@ zh-CN:
     #   defaults:
     #     username: 'User name to sign in.'
     #     password: 'No special characters, please.'
-    labels:
-      user:
-        login: '用户名：'
-        password: '密码：'
-        password_confirmation: '密码确认：'
-      blog:
-        title: '标题'
-        tag: '标签'
-        content: '内容'
-      session:
-        email: '邮箱地址'
-        password: '密码'
+

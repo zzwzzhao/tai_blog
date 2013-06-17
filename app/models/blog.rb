@@ -7,4 +7,6 @@ class Blog < ActiveRecord::Base
 
   validates :user_id, presence: true
   validates :content, presence: true
+  validates :title, presence: true
+  validates :tag, presence: true
 end

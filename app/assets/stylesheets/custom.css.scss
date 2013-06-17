@@ -227,7 +227,7 @@ input, textarea, select, .uneditable-input {
   list-style: none;
   margin: 0;
   li {
-    border: 1px solid #999;
+    border: 1px solid $grayLighter;
     border-radius: 5px;
     box-shadow: 1px 1px 5px #999;
     margin: 5px 0 5px 0;
@@ -245,13 +245,17 @@ input, textarea, select, .uneditable-input {
   padding: 10px;
 }
 
+/* blog form */
+.blog_form {
+  border: 1px solid $grayLighter;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #999;
+  padding: 10px;
+}
+
 /* comments */
 .comments {
   list-style: none;
-  margin: 0;
-  // border: 1px solid #999;
-  // border-radius: 5px;
-  // box-shadow: 2px 2px 5px #999;
   margin: 5px 0 5px 0;
   li {
     margin: 10px;
@@ -261,7 +265,38 @@ input, textarea, select, .uneditable-input {
       color: #000;
     }
   }
-  .content{
+  .content {
     margin-left: 60px;
+  }
+}
+
+.comment_form {
+  padding: 10px;
+}
+
+/* tags */
+.tags {
+  list-style: none;
+  margin: 5px 0 5px 0;
+  border: 1px solid $grayLighter;
+  border-radius: 5px;
+  box-shadow: 1px 1px 5px #999;
+  li {
+    padding: 10px;
+    border-bottom: 1px solid $grayLighter;
+    a {
+      color: #000;
+    }
+  }
+}
+
+/* session form */
+.session_form {
+  border: 1px solid $grayLighter;
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px #999;
+  padding: 10px;
+  h1 {
+    margin-left :180px;
   }
 }
